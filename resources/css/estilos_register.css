@@ -1,0 +1,212 @@
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+html,
+body {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+
+    background: radial-gradient(
+        circle at 50% 50%,
+        #f1f5f9 0%,
+        #cbd5e1 100%
+    ) !important;
+
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL DEL LOGIN
+========================================= */
+
+.login-wrapper-custom {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/* =========================================
+   PANEL DERECHO - IDENTIDAD SENATI
+   Estilo corporativo premium
+========================================= */
+
+.senati-brand-panel {
+    background: linear-gradient(
+        135deg,
+        #00264d 0%,
+        #001122 100%
+    );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Círculo de iluminación superior */
+
+.senati-brand-panel::before {
+    content: '';
+
+    position: absolute;
+    top: -80px;
+    right: -80px;
+
+    width: 250px;
+    height: 250px;
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 102, 204, 0.35) 0%,
+        rgba(0, 51, 102, 0) 70%
+    );
+
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Círculo de iluminación inferior */
+
+.senati-brand-panel::after {
+    content: '';
+
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+
+    width: 220px;
+    height: 220px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(0, 0, 0, 0) 70%
+    );
+
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Contenido por encima de los efectos */
+
+.senati-brand-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   CAMPOS DEL FORMULARIO
+========================================= */
+
+.input-group-alternative .form-control {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Efecto al seleccionar un campo */
+
+.input-group-alternative .form-control:focus {
+    background-color: #ffffff !important;
+    border-color: #003366 !important;
+
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1) !important;
+}
+
+
+/* Iconos de los campos */
+
+.input-group-alternative .input-group-text {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: none !important;
+}
+
+
+/* =========================================
+   BOTÓN DE INICIO DE SESIÓN
+========================================= */
+
+.btn-senati-login {
+    background: linear-gradient(
+        135deg,
+        #003366 0%,
+        #002244 100%
+    );
+
+    border-radius: 8px;
+    border: none;
+
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Efecto hover del botón */
+
+.btn-senati-login:hover {
+    background: linear-gradient(
+        135deg,
+        #004080 0%,
+        #002b55 100%
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(0, 51, 102, 0.3) !important;
+}
+
+
+/* =========================================
+   ENLACES DEL LOGIN
+========================================= */
+
+.login-link-senati {
+    color: #003366;
+
+    transition: color 0.2s ease;
+}
+
+
+/* Efecto hover de los enlaces */
+
+.login-link-senati:hover {
+    color: #001f3f;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+    html,
+    body {
+        overflow-y: auto !important;
+    }
+
+    .login-wrapper-custom {
+        position: relative;
+        min-height: 100vh;
+        height: auto;
+        padding: 20px 0;
+    }
+}

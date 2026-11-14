@@ -1,0 +1,893 @@
+
+/* ==========================================================
+   DASHBOARD AGENDA 2026
+   Estilos aislados para la vista Home
+   PHP + Laravel + AdminLTE | SENATI
+========================================================== */
+
+
+/* ==========================================================
+   CONTENEDOR PRINCIPAL
+========================================================== */
+
+.dashboard-page {
+    color: #183153;
+    padding-bottom: 12px;
+}
+
+
+/* ==========================================================
+   SECCIÓN DE BIENVENIDA
+========================================================== */
+
+.dashboard-welcome {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 112px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    /* Degradado azul corporativo SENATI */
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+
+    box-shadow: 0 4px 15px rgba(0, 31, 63, 0.2);
+}
+
+.dashboard-welcome__icon {
+    display: flex;
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #0754a5;
+    background: #fff;
+    font-size: 25px;
+}
+
+.dashboard-welcome__text {
+    min-width: 0;
+    flex: 1;
+}
+
+.dashboard-welcome__text h1 {
+    margin: 0 0 5px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+.dashboard-welcome__text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 13px;
+}
+
+.dashboard-welcome__date {
+    padding: 9px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.10);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   DISTRIBUCIÓN DE TARJETAS KPI Y ACCESOS DIRECTOS
+========================================================== */
+
+.dashboard-kpi-row > div,
+.dashboard-shortcuts > div {
+    margin-bottom: 14px;
+}
+
+
+/* ==========================================================
+   TARJETAS KPI - INDICADORES
+========================================================== */
+
+.dashboard-kpi {
+    position: relative;
+    height: 100%;
+    min-height: 142px;
+    overflow: hidden;
+    padding: 16px 17px 14px;
+    border: 1px solid #e7edf5;
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(24, 49, 83, 0.045);
+}
+
+/* Línea lateral de color */
+.dashboard-kpi::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    content: "";
+    background: var(--kpi-color);
+}
+
+
+/* Colores de indicadores */
+
+.dashboard-kpi--blue {
+    --kpi-color: #1769d2;
+    --kpi-soft: #eaf2ff;
+}
+
+.dashboard-kpi--green {
+    --kpi-color: #13a66a;
+    --kpi-soft: #e7f8f0;
+}
+
+.dashboard-kpi--purple {
+    --kpi-color: #7544d8;
+    --kpi-soft: #f0eaff;
+}
+
+.dashboard-kpi--orange {
+    --kpi-color: #f28a1b;
+    --kpi-soft: #fff2e3;
+}
+
+
+/* Parte superior y pie de las tarjetas */
+
+.dashboard-kpi__top,
+.dashboard-kpi__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+
+/* Etiqueta */
+
+.dashboard-kpi__label {
+    color: #68788e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+
+/* Icono */
+
+.dashboard-kpi__icon {
+    display: flex;
+    width: 39px;
+    height: 39px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    color: var(--kpi-color);
+    background: var(--kpi-soft);
+    font-size: 17px;
+}
+
+
+/* Valor principal */
+
+.dashboard-kpi__value {
+    margin: 2px 0 7px;
+    color: #123c75;
+    font-size: 29px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+/* Pie de tarjeta */
+
+.dashboard-kpi__footer {
+    color: #718096;
+    font-size: 10.5px;
+}
+
+.dashboard-kpi__footer strong {
+    color: var(--kpi-color);
+    font-size: 12px;
+}
+
+
+/* Etiqueta de estado */
+
+.dashboard-kpi__tag {
+    color: var(--kpi-color);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+
+/* Barra de progreso */
+
+.dashboard-kpi__progress {
+    height: 4px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #edf1f6;
+}
+
+.dashboard-kpi__progress .dashboard-progress-fill {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--kpi-color);
+    transition: width 0.5s ease;
+}
+
+
+/* ==========================================================
+   ENCABEZADOS DE SECCIÓN
+========================================================== */
+
+.dashboard-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px 0 10px;
+}
+
+.dashboard-section-heading h5 {
+    margin: 0 0 3px;
+    color: #153d75;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.dashboard-section-heading h5 i {
+    margin-right: 7px;
+    color: #e99a16;
+}
+
+.dashboard-section-heading p {
+    margin: 0;
+    color: #8794a7;
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   ACCESOS DIRECTOS
+========================================================== */
+
+.dashboard-shortcut {
+    display: flex;
+    min-height: 72px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid #e7edf5;
+    border-radius: 10px;
+    background: #fff;
+    color: inherit;
+    text-decoration: none !important;
+
+    box-shadow: 0 3px 12px rgba(24, 49, 83, 0.035);
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+}
+
+.dashboard-shortcut:hover {
+    transform: translateY(-2px);
+    border-color: #cbdcf2;
+    box-shadow: 0 7px 18px rgba(24, 67, 120, 0.09);
+}
+
+
+/* Iconos de accesos directos */
+
+.dashboard-shortcut__icon {
+    display: flex;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+}
+
+
+/* Colores de accesos */
+
+.shortcut-blue {
+    background: linear-gradient(135deg, #1674df, #0752ad);
+}
+
+.shortcut-green {
+    background: linear-gradient(135deg, #18b879, #07945d);
+}
+
+.shortcut-purple {
+    background: linear-gradient(135deg, #8958e8, #6034bd);
+}
+
+.shortcut-orange {
+    background: linear-gradient(135deg, #ff9a32, #ed7410);
+}
+
+
+/* Texto del acceso directo */
+
+.dashboard-shortcut__text {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+}
+
+.dashboard-shortcut__text strong {
+    color: #1c3d6c;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dashboard-shortcut__text small {
+    margin-top: 3px;
+    color: #8794a7;
+    font-size: 10.5px;
+}
+
+
+/* Flecha */
+
+.dashboard-shortcut__arrow {
+    color: #a6b3c3;
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   FILA CENTRAL DEL DASHBOARD
+========================================================== */
+
+.dashboard-middle-row {
+    margin-top: 2px;
+}
+
+.dashboard-middle-row > div {
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================================
+   PANELES INFORMATIVOS
+========================================================== */
+
+.dashboard-panel {
+    padding: 16px 17px;
+    border: 1px solid #e6edf5;
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(24, 49, 83, 0.045);
+}
+
+
+/* Encabezado del panel */
+
+.dashboard-panel__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.dashboard-panel__header h5 {
+    margin: 0 0 4px;
+    color: #153d75;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.dashboard-panel__header h5 i {
+    margin-right: 7px;
+    color: #1769c8;
+}
+
+.dashboard-panel__header p {
+    margin: 0;
+    color: #8794a7;
+    font-size: 10.5px;
+}
+
+
+/* Insignias y contadores */
+
+.dashboard-panel__badge,
+.dashboard-panel__count {
+    padding: 5px 8px;
+    border-radius: 6px;
+    color: #1769c8;
+    background: #edf4ff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.35px;
+    white-space: nowrap;
+}
+
+
+
+/* ==========================================================
+   GRÁFICO DEL DASHBOARD
+========================================================== */
+
+.dashboard-chart-layout {
+    display: flex;
+    min-height: 235px;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Contenedor del gráfico */
+
+.dashboard-chart-wrap {
+    position: relative;
+    flex: 0 0 48%;
+    max-width: 245px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+
+/* Canvas del gráfico */
+
+.dashboard-chart-wrap canvas {
+    position: relative;
+    z-index: 1;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* Texto central del gráfico */
+
+.dashboard-chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.dashboard-chart-center strong {
+    color: #123c75;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.dashboard-chart-center span {
+    margin-top: 3px;
+    color: #8290a3;
+    font-size: 10px;
+}
+
+
+/* Leyenda del gráfico */
+
+.dashboard-chart-legend {
+    min-width: 0;
+    flex: 1;
+}
+
+
+/* Elementos de la leyenda */
+
+.dashboard-legend-item {
+    display: grid;
+    grid-template-columns: 9px minmax(0, 1fr) auto 38px;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 0;
+    border-bottom: 1px solid #f0f3f7;
+    font-size: 10.5px;
+}
+
+.dashboard-legend-item:last-child {
+    border-bottom: 0;
+}
+
+
+/* Indicador circular de color */
+
+.dashboard-legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+
+/* Nombre de la categoría */
+
+.dashboard-legend-name {
+    overflow: hidden;
+    color: #52647b;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-legend-item strong {
+    color: #24466f;
+    font-size: 10.5px;
+}
+
+.dashboard-legend-percent {
+    color: #1769c8;
+    font-size: 10px;
+    text-align: right;
+}
+
+
+/* ==========================================================
+   LISTA DE USUARIOS
+========================================================== */
+
+.dashboard-users-list {
+    min-height: 190px;
+}
+
+
+/* Elemento de usuario */
+
+.dashboard-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.dashboard-user:last-child {
+    border-bottom: 0;
+}
+
+
+/* Avatar del usuario */
+
+.dashboard-user__avatar {
+    display: flex;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    color: #fff;
+    background: linear-gradient(135deg, #176fd1, #064b9c);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* Información del usuario */
+
+.dashboard-user__info {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+}
+
+.dashboard-user__info strong {
+    overflow: hidden;
+    color: #29476d;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-user__info span {
+    overflow: hidden;
+    margin-top: 2px;
+    color: #8794a7;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Estado del usuario */
+
+.dashboard-user__status {
+    padding: 4px 7px;
+    border-radius: 12px;
+    color: #15945e;
+    background: #e6f7ef;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+
+/* Pie de lista de usuarios */
+
+.dashboard-users-footer {
+    padding-top: 10px;
+    border-top: 1px solid #eef2f6;
+    color: #8794a7;
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   PANEL DE CONTACTOS RECIENTES
+========================================================== */
+
+.dashboard-recent-panel {
+    margin-bottom: 8px;
+}
+
+
+/* Enlace para visualizar todos */
+
+.dashboard-view-all {
+    color: #1769c8;
+    font-size: 10.5px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.dashboard-view-all:hover {
+    color: #064b9c;
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   TABLA DEL DASHBOARD
+========================================================== */
+
+.dashboard-table {
+    margin-bottom: 0;
+    color: #52647b;
+    font-size: 11px;
+}
+
+
+/* Encabezado de tabla */
+
+.dashboard-table thead th {
+    padding: 10px 9px;
+    border-top: 0;
+    border-bottom: 1px solid #dfe8f2;
+    color: #31547d;
+    background: #f3f7fc;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* Celdas */
+
+.dashboard-table tbody td {
+    padding: 9px;
+    border-top: 1px solid #edf1f6;
+    vertical-align: middle;
+}
+
+
+/* Identificador */
+
+.dashboard-id {
+    padding: 4px 7px;
+    border: 1px solid #e5ebf3;
+    border-radius: 5px;
+    color: #60748c;
+    background: #f8fafc;
+    font-size: 10px;
+}
+
+
+/* Nombre del contacto */
+
+.dashboard-contact-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.dashboard-contact-name strong {
+    color: #29476d;
+    font-size: 10.5px;
+    font-weight: 600;
+}
+
+
+/* Avatar del contacto */
+
+.dashboard-contact-avatar {
+    display: flex;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #1769c8;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* Iconos secundarios */
+
+.dashboard-muted-icon {
+    margin-right: 6px;
+    color: #9aa8b8;
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   ESTADO VACÍO
+========================================================== */
+
+.dashboard-empty-state {
+    display: flex;
+    min-height: 180px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #8b99aa;
+    font-size: 11px;
+    text-align: center;
+}
+
+.dashboard-empty-state i {
+    color: #b6c6d9;
+    font-size: 28px;
+}
+
+
+/* ==========================================================
+   CONFIGURACIÓN DE DATATABLES
+========================================================== */
+
+/* Campos de búsqueda y selección */
+
+#tablaHomeContactos_wrapper .dataTables_filter input,
+#tablaHomeContactos_wrapper .dataTables_length select {
+    border: 1px solid #dce5ef;
+    border-radius: 6px;
+    box-shadow: none;
+    font-size: 11px;
+}
+
+
+/* Etiquetas e información */
+
+#tablaHomeContactos_wrapper .dataTables_filter label,
+#tablaHomeContactos_wrapper .dataTables_length label,
+#tablaHomeContactos_wrapper .dataTables_info,
+#tablaHomeContactos_wrapper .dataTables_paginate {
+    color: #718096;
+    font-size: 10.5px;
+}
+
+
+/* Botones de paginación */
+
+#tablaHomeContactos_wrapper .dataTables_paginate .paginate_button {
+    padding: 3px 8px;
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   DISEÑO RESPONSIVO
+========================================================== */
+
+
+/* TABLETS Y PANTALLAS MEDIANAS */
+
+@media (max-width: 991.98px) {
+
+    .dashboard-chart-layout {
+        gap: 12px;
+    }
+
+    .dashboard-chart-wrap {
+        flex-basis: 45%;
+    }
+
+}
+
+
+/* ==========================================================
+   CELULARES Y PANTALLAS PEQUEÑAS
+========================================================== */
+
+@media (max-width: 575.98px) {
+
+    /* Sección de bienvenida */
+
+    .dashboard-welcome {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+        text-align: left;
+    }
+
+    .dashboard-welcome__text h1 {
+        font-size: 20px;
+    }
+
+    .dashboard-welcome__date {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+
+    /* Distribución del gráfico */
+
+    .dashboard-chart-layout {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .dashboard-chart-wrap {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 230px;
+    }
+
+    .dashboard-chart-legend {
+        width: 100%;
+    }
+
+
+    /* Buscador DataTables */
+
+    #tablaHomeContactos_wrapper .dataTables_filter {
+        display: flex !important;
+        justify-content: flex-end !important;
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    #tablaHomeContactos_wrapper .dataTables_filter label {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center;
+        width: 100% !important;
+    }
+
+    #tablaHomeContactos_wrapper .dataTables_filter input {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 38px;
+        margin-left: 0 !important;
+        box-sizing: border-box;
+    }
+
+}
+

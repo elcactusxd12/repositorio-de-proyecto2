@@ -1,0 +1,42 @@
+html, body {
+    height: 100vh !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    background: radial-gradient(circle at 50% 50%, #f1f5f9 0%, #cbd5e1 100%) !important;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.login-wrapper-custom {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-senati-login {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%);
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-senati-login:hover {
+    background: linear-gradient(135deg, #004080 0%, #002b55 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 51, 102, 0.3) !important;
+}
+
+.login-link-senati {
+    color: #003366;
+    transition: color 0.2s ease;
+}
+
+.login-link-senati:hover {
+    color: #001f3f;
+    text-decoration: underline;
+}
+
+.login-link-hover:hover {
+    color: #003366 !important;
+}
